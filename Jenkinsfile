@@ -30,7 +30,7 @@ pipeline {
         script {
           checkout scm
           docker.withRegistry('', 'DockerID') {
-          def customImage = docker.build"nofatard/christ:${env.BUILD_ID}")
+          def customImage = docker.build("nofatard/christ:${env.BUILD_ID}")
           def customImage1 = docker.build("nofatard/christ")
           customImage.push()
           customImage1.push()
