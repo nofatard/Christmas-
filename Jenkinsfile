@@ -39,7 +39,9 @@ pipeline {
     }
 }
     }
-   
+              stage ( 'deployment trigger'){
+          steps {
+            build 'christ-CD'
   }
 }
  
